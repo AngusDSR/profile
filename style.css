@@ -152,19 +152,19 @@ input {
 
   .scroll-text {
     display: block;
+    width: 100%;
     -moz-transform: translateX(100%);
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
 
-    -moz-animation: my-animation 15s linear infinite;
-    -webkit-animation: my-animation 15s linear infinite;
-    animation: my-animation 15s linear infinite;
+    -moz-animation: my-animation 2s linear infinite;
+    -webkit-animation: my-animation 2s linear infinite;
+    animation: my-animation 2s linear infinite;
   }
   @-moz-keyframes my-animation {
     from { -moz-transform: translateX(100%); }
     to { -moz-transform: translateX(-100%); }
   }
-
   /* for Chrome */
   @-webkit-keyframes my-animation {
     from { -webkit-transform: translateX(100%); }
@@ -183,7 +183,6 @@ input {
       transform: translateX(-100%);
     }
   }
-
 
   .emoji {
     display: block;
