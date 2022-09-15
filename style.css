@@ -79,10 +79,6 @@ a {
   font-weight: bolder;
 }
 
-.scroll-text {
-  display: none;
-}
-
 a:hover {
   color: #09BD3E;
 }
