@@ -54,7 +54,7 @@ sup:hover {
 
 img {
   width: 180px;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 p {
@@ -62,10 +62,25 @@ p {
   font-size: 85%;
 }
 
+.prof {
+  display: inline;
+}
+.welcome {
+  display: none;
+}
+
+.emoji {
+  display: none;
+}
+
 a {
   text-decoration: none;
   color:rgb(10, 71, 97);
   font-weight: bolder;
+}
+
+.scroll-text {
+  display: none;
 }
 
 a:hover {
@@ -99,6 +114,10 @@ input {
   padding: 2.5px 5px;
 }
 
+#fire {
+  visibility: hidden;
+}
+
 /* MEDIA QUERIES */
 
 @media (max-width: 960px) {
@@ -108,10 +127,93 @@ input {
   p {
     font-size: 90%;
   }
-  div.card-white:first-of-type {
-    height: auto;
-    padding: 10px;
+
+
+  body {
+    background-color: rgb(0, 255, 106);
+    color: coral;
+    padding: 5%;
+    margin: 10px;
+    text-align: right;
   }
+
+  .prof {
+    display: none;
+  }
+  .welcome {
+    display: inline;
+  }
+
+  h1, h2 {
+    color: blueviolet
+  }
+
+  .banner {
+    mix-blend-mode:hard-light;
+    background-image: url('https://stryvemarketing.com/wp-content/uploads/2016/04/welcome.gif');
+    background-size: contain;
+  }
+
+  .scroll-text {
+    display: block;
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+
+    -moz-animation: my-animation 15s linear infinite;
+    -webkit-animation: my-animation 15s linear infinite;
+    animation: my-animation 15s linear infinite;
+  }
+  @-moz-keyframes my-animation {
+    from { -moz-transform: translateX(100%); }
+    to { -moz-transform: translateX(-100%); }
+  }
+
+  /* for Chrome */
+  @-webkit-keyframes my-animation {
+    from { -webkit-transform: translateX(100%); }
+    to { -webkit-transform: translateX(-100%); }
+  }
+
+  @keyframes my-animation {
+    from {
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    to {
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+
+
+  .emoji {
+    display: block;
+  }
+
+  i {
+  animation: blinker 1s linear infinite;
+  background-size: cover;
+  text-decoration: none;
+  color: rgb(33, 1, 148);
+  font-weight: bolder;
+  }
+
+  #fire {
+    visibility: visible;
+    border-radius: 0%;
+    width: 100%;
+  }
+
+  @keyframes blinker {
+    10% {
+      opacity: 0;
+    }
+}
+
+
+
 }
 
 @media (max-width: 720px) {
